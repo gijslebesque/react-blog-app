@@ -1,0 +1,126 @@
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+
+*:focus {
+	outline: none;
+}
+*{
+	box-sizing:border-box;
+}
+
+html, body{
+	margin:0;
+	display:flex;
+	flex-direction:column;
+	font-size:1.1rem;
+	background:#F0F0D8;
+	font-family: 'Patrick Hand SC', cursive;
+
+	& h1{
+		text-align:center;
+		color:#41403E;
+		font-size:3rem;
+	}
+
+	& section{
+		padding:40px;
+		display:flex;
+		flex-direction:row;
+		justify-content:center;
+		width:100%;
+		min-height:100%;
+
+			& button{
+				align-self:center;
+				background:transparent;
+				padding:1rem;
+				margin:0 1rem;
+				transition:all .5s ease;
+				color:#41403E;
+				font-size:2rem;
+				letter-spacing:1px;
+				outline:none;
+				box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+				border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+
+			&:hover{
+				box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+			} 
+			
+			&.lined.thick{
+				border:solid 7px #41403E;
+			}
+		}
+	}
+}
+
+//Long blog posts should break
+h2, p {
+	max-width: 100%;
+	word-break: break-word;
+}
+
+nav{
+	ul{
+		display: flex;
+		justify-content: space-around;
+		margin:0;
+		padding:0;
+		list-style: none;
+		font-size: 2em;
+	  
+		li{
+			margin:40px;
+		}
+		a{
+			text-decoration: none;
+		   color:black;
+		 
+		}
+		a:hover{
+			text-decoration:underline;
+		}
+	}
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+}
+
+
+@media (max-width:620px){
+	body{
+		h1{
+			margin-top:2rem;
+		}
+		& section{
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+			margin-bottom:1rem;
+			& button{
+				align-self:center;
+				margin-bottom:2rem;
+			}
+		}
+	}
+}
+
+input, textarea{
+	text-align:center;
+	padding: 20px 40px;
+	font-size:1.5em;
+	border:none;
+	background-color: transparent;
+	border-bottom:1px solid black;
+	margin: 20px 0px;
+}
+
+.bottom{
+	align-self: flex-end;
+	margin-bottom:2.5rem;
+}
+
+.tasks{
+	flex-direction: column;
+}
